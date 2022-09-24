@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registro de productos</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+    </head>
+    <body>
+        <div class="container mb-3">
+            <h1 class="display-3">Registrar un producto:</h1>
+        </div>
+       <br>
+        <div class="container col-9" id="table">
+                <form class="needs-validation" action="form-sent.html" method="post" novalidate>
+                    <div class="col-9 mb-3">
+                        <label for="codigo" class="form-label">Código: </label>
+                        <input type="text"  class="form-control" id="codigo" name="producto" required/></li>
+                        <div class="valid-feedback">
+                            ¡Listo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Este campo es obligatorio.
+                        </div>
+                    </div>
+                        
+                    <div class="col-9 mb-3">
+                        <label for="descripcion" class="form-label">Descripción: </label>
+                        <input type="text" class="form-control" id="descripcion" name="producto" required/></li>
+                        <div class="valid-feedback">
+                            ¡Listo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Este campo es obligatorio.
+                        </div>
+                    </div>
+                        
+                    <div class="col-9 mb-3">
+                        <label for="codigo-barra" class="form-label">Código de barras: </label>
+                        <input type="text" class="form-control" id="codigo-barra" name="producto" required /></li>
+                        <div class="valid-feedback">
+                            ¡Listo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Este campo es obligatorio.
+                        </div>
+                    </div>
+                    
+                    <div class="col-9 mb-3">
+                        <label for="precio-unitario" class="form-label">Precio unitario: </label>
+                        <input type="number" class="form-control" id="precio-unitario" name="producto" required /></li>
+                        <div class="valid-feedback">
+                            ¡Listo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Este dato es obligatorio
+                        </div>
+                    </div>
+
+                    <div class="col-9 mb-3">
+                        <label for="stock" class="form-label">Stock: </label>
+                        <input type="number" class="form-control" id="stock" name="producto" required/></li>
+                        <div class="valid-feedback">
+                            ¡Listo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Este campo es obligatorio.
+                        </div>
+                    </div>
+                    
+                    <div class="col-9 mb-3">
+                        <label for="proveedor" class="form-label">Proveedor: </label>
+                        <input type="text" class="form-control" id="proveedor" name="producto" required/></li>
+                        <div class="valid-feedback">
+                            ¡Listo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Este campo es obligatorio.
+                        </div>
+                    </div>
+                    
+                    <div class>
+                        <div class="form-check mb-3">
+                            <label for="estado" class="form-check-label">Estado: </label>
+                            <input type="checkbox" id="estado" name="producto" required/>Activo
+                            <div class="valid-feedback">
+                                ¡Listo!
+                            </div>
+                            <div class="invalid-feedback">
+                                Selecciona el estado activo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 mb-3">
+                        <label for="categoria" class="form-label">Categoría: </label>
+                        <select class="form-select" id="categoria" required>
+                            <option selected disabled value>Seleccione una categoría</option>
+                            <option value="1">Categoría 1</option>
+                            <option value="2">Categoría 2</option>
+                            <option value="3">Categoría 3</option>
+                            <option value="4">Categoría 4</option>
+                        </select>
+                        <div class="valid-feedback">
+                            ¡Listo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Selecciona una categoría.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="btn-guardar"> Guardar </button>
+                    <button type="reset" id="btn-cancelar" class="btn btn-danger"> Cancelar </button>
+                </form>
+        </div>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+    </script>
+        
+    </body>
+</html>

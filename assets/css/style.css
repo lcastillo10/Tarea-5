@@ -1,0 +1,23 @@
+body {
+    background-image: url(../img/backg-main3.jpg);
+    background-attachment: fixed;
+}
+/*INDEX*/
+#table {
+border: 3px solid grey;
+border-radius: 7px;
+background-color: azure;
+box-shadow: 3px 3px 3px grey;
+}
+
+/*FORMULARIO VALIDADO*/ 
+#sent-hd{
+    text-align: center;
+    background-color: #80ff80;
+}
+#check-img {
+    margin-top: 155px;
+    width: 250px;
+    display: block;
+    margin: 0px auto;
+}
